@@ -1,0 +1,55 @@
+.site-header {
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.096);
+    position: absolute;
+    z-index: 999999;
+    display: flex;
+    height: auto;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    left: 0px;
+    top: 0px;
+
+
+    &_inner {
+        width: 80vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .my-name-header {
+            font-family: 'Lemonmilk';
+            font-size: 40px;
+            color: white;
+        }
+
+        .nav-menu {
+            display: block;
+            min-width: 240px;
+            padding-right: 20px;
+            padding-left: 20px;
+
+            .nav-link {
+                padding: 40px 15px 40px 15px;
+                display: inline-block;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+                font-family: 'Lemonmilk';
+                color: white;
+                font-size: 16px;
+                font-weight: 400;
+                transition: opacity 0.3s ease;
+                
+                &:hover {
+                    opacity: 0.5;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.intro-screen {
+    margin-top: 100px;
+}
