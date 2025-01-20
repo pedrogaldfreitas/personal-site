@@ -1,10 +1,9 @@
 .App {
   text-align: center;
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: linear-gradient(52deg, #110870, #470e1e);
   
