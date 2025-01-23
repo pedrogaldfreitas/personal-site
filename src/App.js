@@ -7,6 +7,7 @@ import { ReactComponent as AWSLogo } from './Icons/AWSlogo.svg';
 import { ReactComponent as ReactLogo } from './Icons/React-icon.svg';
 import { ReactComponent as CSharpLogo } from './Icons/CsharpLogo.svg';
 import { ReactComponent as NodeLogo } from './Icons/nodeJSlogo.svg';
+import WaterRipple from './WaterRipple';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -64,6 +65,7 @@ function App() {
           </div>
         </div>
       </div>
+      <WaterRipple />
       <div className='intro-screen'>
         <div className='section-container'>
         <div className='name-summary-and-icons-wrapper'>
