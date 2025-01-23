@@ -1,6 +1,13 @@
+.background-gradient {
+    background: linear-gradient(52deg, #110870, #470e1e);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
 .site-header {
     width: fit-content;
-    background-color: rgba(0, 0, 255, 0.096);
+    background-color: rgba(0, 0, 255, 0);
     position: absolute;
     z-index: 999999;
     display: flex;
@@ -67,60 +74,45 @@
 }
 
 .intro-screen {
-    margin-top: 120px;
+    margin-top: 130px;
     justify-items: center;
     color: white;
     text-align: left;
+    width: -webkit-fill-available;
 
     .my-name {
         font-family: 'Lemonmilk';
         font-size: 60px;
     }
 
-    .my-summary-wrapper {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        justify-content: space-between;
+    .name-summary-and-icons-wrapper {
         display: flex;
 
-        .my-summary {
-            height: fit-content;
-            align-content: center;
-            max-width: 60%;
-            font-size: 18px;
-            line-height: 1.3;
-            font-family: 'Montserrat';
-        }
+        .name-and-summary-wrapper {
+            display: flex;
+            flex-direction: column;
 
-        .floating-icons-container {
-            background-color: blue;
-
-            .hovering-icon {
-                width: 100px;
-                height: 100px;
-                background-color: #3498db; /* Blue color */
-                border-radius: 50%; /* Makes it a circle */
-                position: relative; /* Position relative for animation */
-                animation: hoverUpDown 3s ease-in-out infinite; /* Attach animation */
+            .my-summary-wrapper {
+                padding-top: 20px;
+                padding-bottom: 40px;
+                justify-content: space-between;
+                display: flex;
+        
+                .my-summary {
+                    height: fit-content;
+                    align-content: center;
+                    font-size: 20px;
+                    line-height: 1.5;
+                    font-family: 'Montserrat';
+                    padding-right: 80px;
                 }
-                
-                /* Keyframes for the up and down movement */
-                @keyframes hoverUpDown {
-                0% {
-                    transform: translateY(0); /* Initial position */
-                }
-                50% {
-                    transform: translateY(-20px); /* Move up 20px */
-                }
-                100% {
-                    transform: translateY(0); /* Return to the initial position */
-                }
+        
             }
         }
     }
-
+    
     .my-education {
-        background-color: hsla(0, 0.00%, 100.00%, 0.10);
+        background-color: rgba(255, 255, 255, 0.07);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
@@ -129,9 +121,9 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-
+        
         &_header {
-            font-size: 40px;
+            font-size: 37px;
             display: flex;
             justify-content: flex-start;
             font-family: 'Nyata FTR';
@@ -139,46 +131,191 @@
             height: 75px;
             width: auto;
             align-items: center;
-            background-color: hsla(0, 0.00%, 100.00%, 0.10);
+            background-color: rgba(255, 255, 255, 0.04);
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
-
+        
         &_inner {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
             display: flex;
             width: auto;
             height: 100%;
+
+            //Turn 'EDUCATION' section into column-based layout instead.
+            @media (max-width: 915px) {
+                display: block;
+            }
         }
 
+        
         &_cont-1 {
             font-family: 'Montserrat';
             align-content: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-right: 30px;
+            min-width: 300px;
 
+            @media (min-width: 916px) and (max-width: 1340px) {
+                min-width: 260px;
+            }
+            
+            
             .one {
                 font-size: 20px;
                 font-weight: bold;
             }
-
+            
             .two {
                 font-size: 20px;
             }
-
+            
             .three {
                 font-size: 16px;
             }
         }
-
+        
         &_cont-2 {
             opacity: 0.5;
             padding-right: 30px;
             border-right: solid 1px #ffffff4d;
             align-content: center;
         }
+
+        &_cont-3 {
+            font-family: 'Montserrat';
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 30px;
+            width: -webkit-fill-available;
+
+            .specialization-text {
+                font-size: 23px;
+                font-weight: bold;
+            }
+
+            .specialization-main {
+                display: flex;
+                margin-top: 20px;
+                width: 100%;
+
+                .specialization-main-col {
+                    display: block;
+                    flex: 1;
+
+                    .header {
+                        font-weight: bold;
+                        padding-bottom: 5px;
+                        margin-bottom: 8px;
+                        border-bottom: 1px solid hsla(0, 0.00%, 100.00%, 0.29);
+                        font-size: 16px;
+                    }
+
+                    .list-item {
+                        font-size: 13px;
+                        font-style: italic;
+                        margin-bottom: 4px;
+                    }
+
+                    &.one {
+                        padding-right: 20px;    
+                    }
+                }
+            }
+
+            .specialization-footer {
+                color: rgba(255, 255, 255, 0.45);
+                font-style: italic;
+                font-size: 12px;
+                margin-top: 15px;
+            }
+        }
     }
+}
+
+.floating-icons-container {
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    width: 1020px;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-right: 20px;
+
+    .icons-col {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        .hovering-icon {
+            width: 120px;
+            height: 120px;
+            background-color: #ffffff2d; /* Blue color */
+            border-radius: 50%; /* Makes it a circle */
+            position: relative; /* Position relative for animation */
+            animation: hoverUpDown 5s ease-in-out infinite; /* Attach animation */
+            animation-fill-mode: both;
+            align-content: center;
+            text-align: center;
+            box-shadow: 3px 9px 8px 0px rgb(8 1 29 / 21%);
+
+            svg {
+                margin-top: 5px;
+                width: 80%
+            }
+    
+            &.one {
+                animation-delay: -0.2s;
+                top: -5px;
+                left: 55px;
+                width: 75px;
+                height: 75px;
+            }
+    
+            &.two {
+                top: 20px;
+                right: 10px;
+                animation-delay: -1.4s;
+                width: 95px;
+                height: 95px;
+
+                svg {
+                    width: 70%;
+                    height: 70%;
+                }
+            }
+
+            &.three {
+                top: 40px;
+                left: 30px;
+                animation-delay: -2.6s;
+                width: 85px;
+                height: 85px;
+            }
+
+            &.four {
+                top: 70px;
+                animation-delay: -3.8s;
+                right: 30px;
+            }
+        }
+            
+        /* Keyframes for the up and down movement */
+        @keyframes hoverUpDown {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+    }
+
 }
