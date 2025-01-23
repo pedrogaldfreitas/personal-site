@@ -15,4 +15,12 @@
   @media (max-width: 1530px) {
     width: 80%;
   }
+
+  @media (max-width: 675px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 85%
+  }
 }

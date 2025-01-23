@@ -8,9 +8,9 @@
   background: linear-gradient(52deg, #110870, #470e1e);
   background-size: cover;
   background-attachment: fixed;
-  
+
   .section.center {
-    padding-bottom: 10vh;
+      padding-bottom: 10vh;
   }
 }
 

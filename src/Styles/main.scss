@@ -1,44 +1,37 @@
-.background-gradient {
-    background: linear-gradient(52deg, #110870, #470e1e);
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-}
-
 .site-header {
-    width: fit-content;
+    width: 100%;
+    justify-content: center;
     background-color: rgba(0, 0, 255, 0);
-    position: absolute;
     z-index: 999999;
     display: flex;
     height: auto;
-    padding-right: 10vw;
-    padding-left: 10vw;
     left: 0px;
     top: 0px;
-
-    @media (max-width: 1070px) {
-        justify-content: center;
-        width: 100%;
-        padding: 0;
-    }
-
+    position: fixed;
+    
     &_inner {
         width: 80vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        
         @media (max-width: 1070px) {
             width: fit-content;
             justify-content: center;
         }
-
+        
         .my-name-header {
             font-family: 'Lemonmilk';
             font-size: 40px;
             color: white;
+            opacity: 0;
+            transition: opacity 0.15s ease; 
+
+            &.visible {
+                opacity: 0.75;
+            }
         }
+        
 
         .nav-menu {
             display: block;
@@ -47,6 +40,11 @@
             padding-left: 20px;
             white-space: nowrap;
             overflow: hidden;
+
+            @media (max-width: 600px) {
+                padding-right: 0;
+                padding-left: 0;
+            }
 
             .nav-link {
                 padding: 40px 15px 40px 15px;
@@ -62,6 +60,8 @@
                 
                 @media (max-width: 600px) {
                     font-size: 12px;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
                 }
 
                 &:hover {
@@ -80,13 +80,26 @@
     text-align: left;
     width: -webkit-fill-available;
 
+    @media (max-width: 600px) {
+        margin-top: 80px;
+    }
+
     .my-name {
         font-family: 'Lemonmilk';
         font-size: 60px;
+
+        @media (max-width: 1090px) {
+            font-size: 40px;
+        }
     }
 
     .name-summary-and-icons-wrapper {
         display: flex;
+
+        @media (max-width: 675px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
         .name-and-summary-wrapper {
             display: flex;
@@ -98,6 +111,11 @@
                 justify-content: space-between;
                 display: flex;
         
+                @media (min-width: 1090px) {
+                    padding-top: 40px;
+                    padding-bottom: 50px;
+                }
+
                 .my-summary {
                     height: fit-content;
                     align-content: center;
@@ -105,6 +123,11 @@
                     line-height: 1.5;
                     font-family: 'Montserrat';
                     padding-right: 80px;
+
+                    @media (max-width: 1090px) {
+                        padding-right: 0px;
+                        font-size: 15px;
+                    }
                 }
         
             }
@@ -117,7 +140,6 @@
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        height: 270px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -151,47 +173,92 @@
 
         
         &_cont-1 {
-            font-family: 'Montserrat';
-            align-content: center;
+            flex-direction: row;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-width: 300px;
-
-            @media (min-width: 916px) and (max-width: 1340px) {
-                min-width: 260px;
-            }
-            
-            
-            .one {
-                font-size: 20px;
-                font-weight: bold;
-            }
-            
-            .two {
-                font-size: 20px;
-            }
-            
-            .three {
-                font-size: 16px;
-            }
-        }
-        
-        &_cont-2 {
-            opacity: 0.5;
-            padding-right: 30px;
             border-right: solid 1px #ffffff4d;
-            align-content: center;
+
+            @media (max-width: 915px) {
+                border-right: none;
+                border-bottom: solid 1px #ffffff4d;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                justify-content: flex-start;
+            }
+
+            .text-info {
+                font-family: 'Montserrat';
+                align-content: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-width: 300px;
+    
+                @media (min-width: 916px) and (max-width: 1340px) {
+                    min-width: 260px;
+                }
+                
+                @media (max-width: 380px) {
+                    min-width: unset;
+                }
+
+                .one {
+                    font-size: 20px;
+                    font-weight: bold;
+
+                    @media (max-width: 380px) {
+                        font-size: 18px;
+                    }
+                }
+                
+                .two {
+                    font-size: 20px;
+                    @media (max-width: 380px) {
+                        font-size: 18px;
+                    }
+                }
+                
+                .three {
+                    font-size: 16px;
+
+                    @media (max-width: 380px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .sfu-logo {
+                opacity: 0.5;
+                padding-right: 30px;
+                align-content: center;
+
+                @media (max-width: 580px) {
+                    position: relative;
+                    top: 32px;
+                    left: -70px;
+                    padding-right: 0;
+
+                    svg {
+                        height: 25px;
+                        width: 50px;
+                    }
+                }
+            }
         }
 
-        &_cont-3 {
+        &_cont-2 {
             font-family: 'Montserrat';
             align-content: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding-left: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             width: -webkit-fill-available;
+            
+            @media (max-width: 915px) {
+                padding-left: 0;
+            }
 
             .specialization-text {
                 font-size: 23px;
@@ -212,13 +279,22 @@
                         padding-bottom: 5px;
                         margin-bottom: 8px;
                         border-bottom: 1px solid hsla(0, 0.00%, 100.00%, 0.29);
-                        font-size: 16px;
+                        font-size: 18px;
+
+                        @media (max-width: 1090px) {
+                            font-size: 16px;
+                        }
                     }
 
                     .list-item {
-                        font-size: 13px;
+                        font-size: 16px;
                         font-style: italic;
                         margin-bottom: 4px;
+
+                        @media (max-width: 1090px) {
+                            font-size: 13px;
+                            margin-bottom: 7px;
+                        }
                     }
 
                     &.one {

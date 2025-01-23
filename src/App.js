@@ -14,9 +14,37 @@ function App() {
   useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResizeWindow);
+
+    //Makes my name disappear from header when on the "ABOUT" section.
+    const handleDisappearingName = () => {
+      const headerName = document.querySelector('.my-name-header');
+      const aboutSectionName = document.querySelector('.my-name');
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            headerName.classList.remove('visible');
+          } else {
+            headerName.classList.add('visible');
+          }
+        },
+        {
+          threshold: 0.1
+        }
+      );
+
+      observer.observe(aboutSectionName);
+
+      return () => observer.disconnect();
+    }
+
+    handleDisappearingName();
+    //document.addEventListener("DOMContentLoaded", handleDisappearingName);
+
     return () => {
       window.removeEventListener("resize", handleResizeWindow);
     }
+
   }, [])
 
   return (
@@ -53,24 +81,26 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="floating-icons-container">
-            <div className="icons-col">
-              <div className='hovering-icon one'>
-                <CSharpLogo />
+          {width > 1090 &&
+            <div className="floating-icons-container">
+              <div className="icons-col">
+                <div className='hovering-icon one'>
+                  <CSharpLogo />
+                </div>
+                <div className='hovering-icon two'>
+                  <NodeLogo />
+                </div>
               </div>
-              <div className='hovering-icon two'>
-                <NodeLogo />
+              <div className="icons-col">
+                <div className='hovering-icon three'>
+                  <AWSLogo />
+                </div>
+                <div className='hovering-icon four'>
+                  <ReactLogo />
+                </div>
               </div>
             </div>
-            <div className="icons-col">
-              <div className='hovering-icon three'>
-                <AWSLogo />
-              </div>
-              <div className='hovering-icon four'>
-                <ReactLogo />
-              </div>
-            </div>
-          </div>
+          }
         </div>
           <div className='my-education'>
             <div className='my-education_header'>
@@ -78,29 +108,31 @@ function App() {
             </div>
             <div className='my-education_inner'>
               <div className='my-education_cont-1'>
-                {/** Computer science major, bachelor of science, etc */}
-                <div className='one'>Computer Science Major</div>
-                <div className='two'>Bachelor of Science</div>
-                <div className='three'>Simon Fraser University 
-                <br />2018-2024</div>
+                <div className='text-info'>
+                  {/** Computer science major, bachelor of science, etc */}
+                  <div className='one'>Computer Science Major</div>
+                  <div className='two'>Bachelor of Science</div>
+                  <div className='three'>Simon Fraser University 
+                  <br />2018-2024</div>
+                </div>
+                <div className='sfu-logo'>
+                  {/** SFU svg logo */}
+                  {(width > 1340 || (width <= 915 && width >= 400)) && <SFULogo className="sfuLogo"/>}
+                </div>
               </div>
               <div className='my-education_cont-2'>
-                {/** SFU svg logo */}
-                {(width > 1340 || width <= 915) && <SFULogo className="sfuLogo"/>}
-              </div>
-              <div className='my-education_cont-3'>
                 {/** Specialization section */}
                 <div className='specialization-text'>Specialization</div>
                 <div className='specialization-main'>
                   {/** Specialization info */}
                   <div className='specialization-main-col one'>
-                    <div className='header'>Computing{width > 1160 ? " " : <br />}Systems</div>
+                    <div className='header'>Computing{width > 1242 ? " " : <br />}Systems</div>
                     <div className='list-item'>Operating Systems</div>
                     <div className='list-item'>Data Communications & Networking</div>
                     <div className='list-item'>Computer Architecture</div>
                   </div>
                   <div className='specialization-main-col two'>
-                    <div className='header'>Theoretical{width > 1160 ? " " : <br />}Computing Science</div>
+                    <div className='header'>Theoretical{width > 1242 ? " " : <br />}Computing Science</div>
                     <div className='list-item'>Data Structures & Algorithms</div>
                     <div className='list-item'>Design & Analysis of Computing Algorithms</div>
                   </div>
