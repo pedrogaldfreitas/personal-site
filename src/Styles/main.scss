@@ -274,7 +274,7 @@
                     display: block;
                     flex: 1;
 
-                    .header {
+                    .list-header {
                         font-weight: bold;
                         padding-bottom: 5px;
                         margin-bottom: 8px;
@@ -393,5 +393,61 @@
         }
 
     }
+}
 
+.experience-section {
+    margin-top: 150px;
+    justify-items: center;
+    width: -webkit-fill-available;
+
+    .experience-and-skills-wrapper {
+        display: flex;
+        padding: 0;
+
+        .experience-title-and-timeline-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+    }
+}
+
+.projects-section {
+    margin-top: 150px;
+    justify-items: center;
+    width: -webkit-fill-available;
+}
+
+.container-bg {
+    background-color: hsla(0, 0.00%, 100.00%, 0.10);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.header {
+    font-size: 37px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Nyata FTR';
+    padding-left: 30px;
+    height: 75px;
+    width: auto;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+}
+
+.section-title {
+    font-size: 70px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Nyata FTR';
+    height: 75px;
+    width: auto;
+    align-items: center;
+    color: white;
 }

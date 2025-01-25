@@ -1,0 +1,22 @@
+.skills-section-container {
+    flex: 1;
+    height: fit-content;
+
+    .skills-section-inner {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        text-align: left;
+        color: white;
+        font-family: 'Montserrat';
+
+        .skills-header {
+            font-size: 20px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.29);
+            margin-bottom: 8px;
+            padding-top: 10px;
+        }
+    }
+}

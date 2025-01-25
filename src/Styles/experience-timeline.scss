@@ -1,0 +1,37 @@
+.timeline {
+    margin-top: 50px;
+    
+    .vertical-timeline-element-content {
+        &.bounce-in {
+            background-color: #ffffff3d;
+            color: white;
+            font-family: 'Montserrat';
+            box-shadow: none;
+            -webkit-box-shadow: none;
+    
+            .vertical-timeline-element-content-arrow {
+                border-right: 7px solid #ffffff3d;
+            }
+    
+            .event-date {
+                margin-top: 0;
+                color: #ffffffa3;
+            }
+    
+            .vertical-timeline-element-info {
+                margin-top: 12px;
+                font-size: 13px;
+                line-height: 15px;
+                font-style: italic;
+    
+                &.bullet-list {
+                    padding-left: 20px;
+                    .timeline-list-item {
+                        text-align: left;
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
+}

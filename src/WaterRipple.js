@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 const WaveDotsEffect = () => {
@@ -16,7 +16,7 @@ const WaveDotsEffect = () => {
         // Geometry for the grid of points (dots)
         const width = 50;
         const depth = 30;
-        const divisions = 60; // How many rows and columns of points
+        const divisions = 80; // How many rows and columns of points
         const geometry = new THREE.BufferGeometry();
         const positions = [];
         const colors = [];  
@@ -85,7 +85,7 @@ const WaveDotsEffect = () => {
             const scrollFactor = scrollYRef.current * 0.008;
 
             camera.position.y = 4 - scrollFactor;  // Move the camera up/down based on scroll
-            camera.rotation.x = Math.min(scrollFactor * 0.01, 0.5);  // Tilt the camera as you scroll (adjust this factor for desired tilt)
+            camera.rotation.x = Math.min((scrollFactor * 0.01) - 0.05, 0.5);  // Tilt the camera as you scroll (adjust this factor for desired tilt)
 
             // Update the positions of the points to simulate waves
             const positions = points.geometry.attributes.position.array;
@@ -114,7 +114,7 @@ const WaveDotsEffect = () => {
         };
     }, []);
 
-  return <div ref={mountRef} style={{ width: '100vw', height: '100vh', position: 'fixed'}} />;
+  return <div ref={mountRef} style={{ width: '100vw', height: '100vh', position: 'fixed', pointerEvents: 'none'}} />;
 };
 
 export default WaveDotsEffect;

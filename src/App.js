@@ -8,6 +8,8 @@ import { ReactComponent as ReactLogo } from './Icons/React-icon.svg';
 import { ReactComponent as CSharpLogo } from './Icons/CsharpLogo.svg';
 import { ReactComponent as NodeLogo } from './Icons/nodeJSlogo.svg';
 import WaterRipple from './WaterRipple';
+import Skills from './SkillsSection';
+import ExperienceTimeline from './Components/ExperienceTimeline';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -21,26 +23,27 @@ function App() {
       const headerName = document.querySelector('.my-name-header');
       const aboutSectionName = document.querySelector('.my-name');
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            headerName.classList.remove('visible');
-          } else {
-            headerName.classList.add('visible');
+      if (headerName && aboutSectionName) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              headerName.classList.remove('visible');
+            } else {
+              headerName.classList.add('visible');
+            }
+          },
+          {
+            threshold: 0.1
           }
-        },
-        {
-          threshold: 0.1
-        }
-      );
-
-      observer.observe(aboutSectionName);
-
-      return () => observer.disconnect();
-    }
+        );
+  
+        observer.observe(aboutSectionName);
+  
+        return () => observer.disconnect();
+      }
+    };
 
     handleDisappearingName();
-    //document.addEventListener("DOMContentLoaded", handleDisappearingName);
 
     return () => {
       window.removeEventListener("resize", handleResizeWindow);
@@ -50,6 +53,9 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <title>Pedro Freitas</title>
+      </Helmet>
       <div className="site-header">
         <div className="site-header_inner">
           {width > 1070 &&
@@ -67,7 +73,7 @@ function App() {
       </div>
       <WaterRipple />
       <div className='intro-screen'>
-        <div className='section-container'>
+        <div className='section-container container-bg'>
         <div className='name-summary-and-icons-wrapper'>
           <div className='name-and-summary-wrapper'>
             <div className='my-name'>PEDRO FREITAS</div>
@@ -128,13 +134,13 @@ function App() {
                 <div className='specialization-main'>
                   {/** Specialization info */}
                   <div className='specialization-main-col one'>
-                    <div className='header'>Computing{width > 1242 ? " " : <br />}Systems</div>
+                    <div className='list-header'>Computing{width > 1242 ? " " : <br />}Systems</div>
                     <div className='list-item'>Operating Systems</div>
                     <div className='list-item'>Data Communications & Networking</div>
                     <div className='list-item'>Computer Architecture</div>
                   </div>
                   <div className='specialization-main-col two'>
-                    <div className='header'>Theoretical{width > 1242 ? " " : <br />}Computing Science</div>
+                    <div className='list-header'>Theoretical{width > 1242 ? " " : <br />}Computing Science</div>
                     <div className='list-item'>Data Structures & Algorithms</div>
                     <div className='list-item'>Design & Analysis of Computing Algorithms</div>
                   </div>
@@ -145,6 +151,24 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="experience-section">
+        <div className="section-container experience-and-skills-wrapper">
+          <div className="experience-title-and-timeline-wrapper">
+            <div className="section-title">
+              EXPERIENCE
+            </div>
+            <div className="timeline">
+              <ExperienceTimeline />
+            </div>
+          </div>
+          <Skills />
+        </div>
+      </div>
+      <div className="projects-section">
+        <div className="section-title">
+          PROJECTS
         </div>
       </div>
     </div>
