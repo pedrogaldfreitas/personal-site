@@ -10,6 +10,8 @@ import { ReactComponent as NodeLogo } from './Icons/nodeJSlogo.svg';
 import WaterRipple from './WaterRipple';
 import Skills from './SkillsSection';
 import ExperienceTimeline from './Components/ExperienceTimeline';
+import { Helmet } from 'react-helmet';
+import MyCarousel from './Components/MyCarousel.js';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -170,6 +172,7 @@ function App() {
         <div className="section-title">
           PROJECTS
         </div>
+        <MyCarousel />
       </div>
     </div>
   );
