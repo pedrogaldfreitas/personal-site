@@ -67,6 +67,8 @@ function App() {
     <div className="App">
       <Helmet>
         <title>Pedro Freitas</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="alternate icon" href="/favicon.png" />
       </Helmet>
       <div className="site-header">
         <div className="site-header_inner">
