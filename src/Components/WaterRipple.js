@@ -68,6 +68,7 @@ const WaveDotsEffect = () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
         };
 
         const onScroll = () => {
@@ -108,6 +109,8 @@ const WaveDotsEffect = () => {
         return () => {
             window.removeEventListener('resize', onWindowResize);
             window.removeEventListener('scroll', onScroll);
+
+            mountRef.current.removeChild(renderer.domElement);
             renderer.dispose();
             geometry.dispose();
             material.dispose();

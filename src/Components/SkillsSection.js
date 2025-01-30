@@ -1,8 +1,8 @@
-import './App.css';
-import './Styles/section-container.scss';
-import './Styles/main.scss'
-import './Styles/skills.scss'
-import SkillBar from './Components/SkillBar';
+import '../App.css';
+import '../Styles/section-container.scss';
+import '../Styles/main.scss'
+import '../Styles/skills.scss'
+import SkillBar from './SkillBar';
 import { useRef } from 'react';
 import { useInView } from "framer-motion"; 
 

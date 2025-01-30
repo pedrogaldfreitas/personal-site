@@ -7,14 +7,19 @@ import { ReactComponent as AWSLogo } from './Icons/AWSlogo.svg';
 import { ReactComponent as ReactLogo } from './Icons/React-icon.svg';
 import { ReactComponent as CSharpLogo } from './Icons/CsharpLogo.svg';
 import { ReactComponent as NodeLogo } from './Icons/nodeJSlogo.svg';
-import WaterRipple from './WaterRipple';
-import Skills from './SkillsSection';
+import { FaSquareGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import WaterRipple from './Components/WaterRipple.js';
+import Skills from './Components/SkillsSection.js';
 import ExperienceTimeline from './Components/ExperienceTimeline';
 import { Helmet } from 'react-helmet';
 import MyCarousel from './Components/MyCarousel.js';
+import ContactCard from './Components/ContactCard.js';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
+  const linkedInLink = "https://www.linkedin.com/in/freitasp/";
+  const gitHubLink = "https://github.com/pedrogaldfreitas";
 
   useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);
@@ -53,6 +58,11 @@ function App() {
 
   }, [])
 
+  const scrollToSection = (section) => {
+    const sectionElement = document.getElementById(section);
+    sectionElement.scrollIntoView({behavior: "smooth"});
+  }
+
   return (
     <div className="App">
       <Helmet>
@@ -66,15 +76,15 @@ function App() {
             </div>
           }
           <div className="nav-menu">
-            <div className="nav-link">ABOUT</div>
-            <div className="nav-link">EXPERIENCE</div>
-            <div className="nav-link">PROJECTS</div>
-            <div className="nav-link">CONTACT</div>
+            <div className="nav-link" onClick={() => scrollToSection("intro-screen")}>ABOUT</div>
+            <div className="nav-link" onClick={() => scrollToSection("experience-section")}>EXPERIENCE</div>
+            <div className="nav-link" onClick={() => scrollToSection("projects-section")}>PROJECTS</div>
+            <div className="nav-link" onClick={() => scrollToSection("contact-section")}>CONTACT</div>
           </div>
         </div>
       </div>
       <WaterRipple />
-      <div className='intro-screen'>
+      <div className='intro-screen' id="intro-screen">
         <div className='section-container container-bg'>
         <div className='name-summary-and-icons-wrapper'>
           <div className='name-and-summary-wrapper'>
@@ -155,7 +165,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="experience-section">
+      <div className="experience-section" id="experience-section">
         <div className="section-container experience-and-skills-wrapper">
           <div className="experience-title-and-timeline-wrapper">
             <div className="section-title">
@@ -168,11 +178,37 @@ function App() {
           <Skills />
         </div>
       </div>
-      <div className="projects-section">
-        <div className="section-title">
+      <div className="projects-section" id="projects-section">
+        <div className="section-title projects">
           PROJECTS
         </div>
         <MyCarousel />
+      </div>
+      <div className="contact-section" id="contact-section">
+        <div className="section-title">
+          CONTACT
+        </div>
+        <div className="contact-section-middle">
+          <ContactCard />
+          <div className="linkedin-and-github-section">
+            Connect With Me
+            <div className="icons">
+              <div className="icon" onClick={() => window.open(linkedInLink, '_blank')}>
+                <FaLinkedin />
+              </div>
+              <div className="icon" onClick={() => window.open(gitHubLink, '_blank')}>
+                <FaSquareGithub />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="resume-button">
+          {/*View Resume*/}
+        </div>
+      </div>
+      <div className="space"></div>
+      <div className="site-footer">
+        © 2025 Pedro Freitas
       </div>
     </div>
   );

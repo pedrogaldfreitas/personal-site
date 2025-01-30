@@ -1,6 +1,12 @@
 .swiper {
     padding: 20px 0px;
     height: 500px;
+    cursor: default;
+}
+
+.carousel-container {
+    justify-items: center;
+    width: -webkit-fill-available;
 }
 
 .slide-style {
@@ -39,6 +45,10 @@
             text-align: left;
             background: linear-gradient(to bottom, rgb(0 0 0 / 100%), transparent);
             border-radius: 25px 25px 0 0;
+            
+            @media (max-width: 1060px) {
+                font-size: 50px;
+            }
 
             .slide-title-and-tech {
                 width: -webkit-fill-available;
@@ -48,6 +58,7 @@
                 .tech-used {
                     font-size: 20px;
                     display: flex;
+                    flex-wrap: wrap;
                 }
             }
 
@@ -84,6 +95,11 @@
             box-sizing: border-box;
             width: 100%;
             text-shadow: 0.5px 0.5px 5px black;
+
+            @media (max-width: 540px) {
+                font-size: 15px;
+                padding-right: 20px;
+            }
         }
     }
 }
@@ -98,4 +114,23 @@
     background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent);
     border-radius: 25px;
     pointer-events: none;
+}
+
+.swiper-pagination {
+    position: unset;
+    bottom: 10px;
+    display: flex;
+    margin-top: 10px;
+    width: 25% !important;
+    height: 15px !important;
+    background: rgba(255, 255, 255, 0.144);
+    border-radius: 8px;
+    overflow: hidden !important;
+}
+
+.swiper-pagination-progressbar-fill {
+    background: #ffffff44 !important;
+    height: 100%;
+    border-radius: 8px;
+    clip-path: inset(0 0 0 round 50px) !important;
 }

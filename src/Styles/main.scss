@@ -74,14 +74,14 @@
 }
 
 .intro-screen {
-    margin-top: 130px;
+    padding-top: 130px;
     justify-items: center;
     color: white;
     text-align: left;
     width: -webkit-fill-available;
 
     @media (max-width: 600px) {
-        margin-top: 80px;
+        border-top: 80px;
     }
 
     .my-name {
@@ -396,13 +396,39 @@
 }
 
 .experience-section {
-    margin-top: 150px;
+    padding-top: 130px;
+    padding-bottom: 20px;
     justify-items: center;
     width: -webkit-fill-available;
 
     .experience-and-skills-wrapper {
         display: flex;
         padding: 0;
+
+        @media (max-width: 950px) {
+            flex-direction: column;
+            align-items: center;
+
+            .skills-section-container {
+                margin-top: 50px;
+                width: 100%;
+
+                .skills-section-inner {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .skill-type-container {
+                        display: flex;
+                        flex-direction: column;
+                        width: 30%;
+
+                        .skills-header {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
 
         .experience-title-and-timeline-wrapper {
             display: flex;
@@ -413,7 +439,8 @@
 }
 
 .projects-section {
-    margin-top: 150px;
+    padding-top: 130px;
+    padding-bottom: 30px;
     justify-items: center;
     width: -webkit-fill-available;
 }
@@ -444,10 +471,107 @@
 .section-title {
     font-size: 70px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     font-family: 'Nyata FTR';
     height: 75px;
     width: auto;
     align-items: center;
     color: white;
+
+    &.projects {
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 620px) {
+        font-size: 60px;
+    }
+}
+
+.contact-section {
+    padding-top: 130px;
+    justify-items: center;
+    width: -webkit-fill-available;
+
+    .contact-section-middle {
+        width: 50%;
+        display: flex;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-family: 'Nyata FTR';
+        justify-content: space-between;
+        margin-top: 40px;
+        padding: 40px;
+        border: 3px solid #ffffff2b;
+        border-radius: 50px;
+        
+        
+        .linkedin-and-github-section {
+            margin-left: 50px;
+            align-content: center;
+            
+            .icons {
+                font-size: 150px;
+                display: flex;
+                height: 166px;
+                
+                .icon {
+                    margin: 8px;
+                    color: rgb(255, 255, 255);
+                    opacity: 0.5;
+                    transition: (opacity ease 0.08s), (transform ease 0.12s);
+                    
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 1;
+                        transform: scale(1.05);
+                    }
+                }
+                
+            }
+        }
+
+        @media (max-width: 540px) {
+            padding: 20px;
+
+            .contact-card {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        @media (max-width: 840px) {
+            width: 85%;
+        }
+
+        @media (max-width: 1590px) {
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 40px;
+        
+            .linkedin-and-github-section {
+                margin-left: 0;
+                margin-top: 30px;
+
+                .icons {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.space {
+    height: 350px;
+}
+
+.site-footer {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.479), transparent);
+    width: 100vw;
+    height: 300px;
+    align-self: flex-end;
+    font-family: 'Nyata FTR';
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.493);
+    text-align:center;
+    align-content: center;
 }

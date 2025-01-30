@@ -73,7 +73,6 @@ const ExperienceTimeline = () => {
                 <p className="event-date">September 2018</p>
                 <h3 className="vertical-timeline-element-title">Began Courses</h3>
                 <h4 className="vertical-timeline-element-subtitle">at Simon Fraser University</h4>
-                <p className="vertical-timeline-element-info">Started with Calculus, Discrete Mathematics, Introduction to Computer Science and Physics as an elective. What a rude awakening.</p>
             </VerticalTimelineElement>
         </VerticalTimeline>
     )

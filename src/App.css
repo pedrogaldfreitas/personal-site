@@ -2,13 +2,15 @@
   text-align: center;
   display: flex;
   width: 100vw;
-  height: 7000px;
   flex-direction: column;
   align-items: center;
   background: linear-gradient(52deg, #110870, #470e1e);
   background-size: cover;
   background-attachment: fixed;
+  box-sizing: border-box;
+  overflow: scroll;
   
+
   .section.center {
       padding-bottom: 10vh;
   }

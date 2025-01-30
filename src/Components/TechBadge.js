@@ -11,8 +11,8 @@ export default function TechBadge({tech}) {
             bg: "#4d0dff",
             text: "white",
         },
-        "C++": {
-            bg: "#0d4eff",
+        "Java": {
+            bg: "red",
             text: "white",
         },
         TypeScript: {
