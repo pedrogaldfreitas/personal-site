@@ -8,8 +8,8 @@
   background-size: cover;
   background-attachment: fixed;
   box-sizing: border-box;
-  overflow: scroll;
-  
+  overflow-y: scroll;
+
 
   .section.center {
       padding-bottom: 10vh;
