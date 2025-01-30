@@ -8,6 +8,10 @@
             font-family: 'Montserrat';
             box-shadow: none;
             -webkit-box-shadow: none;
+
+            @media (max-width: 500px) {
+                width: 95%;
+            }
     
             .vertical-timeline-element-content-arrow {
                 border-right: 7px solid #ffffff3d;
