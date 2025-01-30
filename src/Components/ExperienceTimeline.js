@@ -12,7 +12,7 @@ const ExperienceTimeline = () => {
         <VerticalTimeline>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                iconStyle={{background: '4A90E2', color: '#fff'}} 
+                iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<GiDiploma />}  
             >
                 <p className="event-date">June 2024</p>
@@ -21,7 +21,7 @@ const ExperienceTimeline = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                iconStyle={{background: '4A90E2', color: '#fff'}} 
+                iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<MdWork />}  
             >
                 <p className="event-date">May 2022-December 2022</p>
@@ -38,7 +38,7 @@ const ExperienceTimeline = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                iconStyle={{background: '4A90E2', color: '#fff'}} 
+                iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<FaProjectDiagram  />}  
             >
                 <p className="event-date">September 2021-December 2021</p>
@@ -53,7 +53,7 @@ const ExperienceTimeline = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                iconStyle={{background: '4A90E2', color: '#fff'}} 
+                iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<MdWork />}  
             >
                 <p className="event-date">May 2021-August 2021</p>
@@ -67,7 +67,7 @@ const ExperienceTimeline = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                iconStyle={{background: '4A90E2', color: '#fff'}} 
+                iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<FaGraduationCap />}  
             >
                 <p className="event-date">September 2018</p>

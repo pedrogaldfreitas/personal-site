@@ -21,7 +21,7 @@
                 margin-top: 0;
                 color: #ffffffa3;
             }
-    
+
             .vertical-timeline-element-info {
                 margin-top: 12px;
                 font-size: 13px;
@@ -37,5 +37,13 @@
                 }
             }
         }
+    }
+}
+
+
+.vertical-timeline-element-icon .shadow-size-small .bounce-in {
+    background-color: white;
+    svg {
+        
     }
 }
