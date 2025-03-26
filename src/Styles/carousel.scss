@@ -79,6 +79,39 @@
             }
         }
 
+        .slide-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Nyata FTR';
+            width: fit-content;
+            align-self: center;
+            
+
+            .icon {
+                font-size: 100px;
+                color: rgba(255, 255, 255, 0.5);
+                margin-top: 10px;
+                padding-bottom: 5px;
+
+                &:hover {
+                    color: white;
+                    cursor: pointer;
+                    font-size: 115px;
+                }
+
+            }
+
+            &:hover .playable-text {
+                color: white;
+            }
+            
+            .playable-text {
+                font-size:60px;
+                color: rgba(255, 255, 255, 0);
+            }
+        }
+
         .slide-footer {
             background: linear-gradient(to top, black, transparent);
             align-self: center;
