@@ -93,13 +93,13 @@
                 color: rgba(255, 255, 255, 0.5);
                 margin-top: 25px;
                 padding-bottom: 5px;
-                transition: (transform 0.1s ease), (color 0.1s ease);
+                transition: (font-size 0.1s ease), (color 0.1s ease);
             }
 
             .playable-text {
                 font-size: 30px;
                 color: rgba(255, 255, 255, 0);
-                transition: (transform 0.1s ease), (color 0.1s ease);
+                transition: (font-size 0.1s ease), (color 0.1s ease);
             }
 
             &:hover {
