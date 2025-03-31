@@ -89,26 +89,29 @@
             
 
             .icon {
-                font-size: 100px;
+                font-size: 120px;
                 color: rgba(255, 255, 255, 0.5);
-                margin-top: 10px;
+                margin-top: 25px;
                 padding-bottom: 5px;
+                transition: (transform 0.1s ease), (color 0.1s ease);
+            }
 
-                &:hover {
+            .playable-text {
+                font-size: 30px;
+                color: rgba(255, 255, 255, 0);
+                transition: (transform 0.1s ease), (color 0.1s ease);
+            }
+
+            &:hover {
+                .icon {
                     color: white;
                     cursor: pointer;
-                    font-size: 115px;
+                    font-size: 135px;
                 }
-
-            }
-
-            &:hover .playable-text {
-                color: white;
-            }
-            
-            .playable-text {
-                font-size:60px;
-                color: rgba(255, 255, 255, 0);
+    
+                .playable-text {
+                    color: white;
+                }
             }
         }
 

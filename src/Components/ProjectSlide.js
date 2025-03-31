@@ -2,7 +2,7 @@ import TechBadge from './TechBadge';
 import '../Styles/carousel.scss';
 import { FaGithub, FaPlayCircle } from 'react-icons/fa';;
 
-export default function ProjectSlide({title, techUsed, githubLink, footerText, img, playable=false, playableText=''}) {
+export default function ProjectSlide({title, techUsed, githubLink, footerText, img, playable=false, playableText='', onClickPlay = () => {}}) {
     return (
         <div className="slide slide-style">
             <img src={img} className="slide-pic"/>
@@ -19,7 +19,7 @@ export default function ProjectSlide({title, techUsed, githubLink, footerText, i
                     </div>
                 </div>
                 {playable && 
-                    <div className="slide-center">
+                    <div className="slide-center" onClick={onClickPlay}>
                         <FaPlayCircle className="icon"/>
                         <div className="playable-text">{playableText}</div>
                     </div>

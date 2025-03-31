@@ -21,7 +21,6 @@ export default function MyCarousel() {
         WorkshopPlus: "Workshop+ is a virtual platform that brings the university workshop experience online. Students join with a code, select a course and assignment, and access past TA-led help videos or request live assistance. TAs can set availability across multiple workshops, ensuring targeted support.",
     }
 
-
     return (
         <div className="carousel-container">
             <Swiper
@@ -44,7 +43,7 @@ export default function MyCarousel() {
                 grabCursor={true}
             >
                 <SwiperSlide>
-                    <ProjectSlide title="SFU Wintertide" techUsed={["Unity", "C#", "Blender"]} githubLink="https://github.com/pedrogaldfreitas/sfuwintertide" footerText={footers["SFUWintertide"]} img={SFUWintertidePic} playable={true} playableText={'Play!'}/>
+                    <ProjectSlide title="SFU Wintertide" techUsed={["Unity", "C#", "Blender"]} githubLink="https://github.com/pedrogaldfreitas/sfuwintertide" footerText={footers["SFUWintertide"]} img={SFUWintertidePic} playable={true} playableText={'Play!'} onClickPlay={() => window.open("https://doctorcrawfish.itch.io/sfuwintertide", "_blank")}/>
                 </SwiperSlide>
                 <SwiperSlide>
                     <ProjectSlide title="Flight Finder" techUsed={["JavaScript", "React", "NodeJS"]} githubLink="https://github.com/pedrogaldfreitas/google-flights-clone" footerText={footers["Skyscrapper"]} img={SkyscrapperPic}/>
@@ -53,7 +52,7 @@ export default function MyCarousel() {
                     <ProjectSlide title="Baytree Mentor Portal" techUsed={["TypeScript", "React", "NodeJS", "Express", "MongoDB"]} githubLink="https://github.com/Earth-373/baytree-centre-app" footerText={footers["BaytreeCentre"]} img={BaytreeCentrePic}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProjectSlide title="Lost Cascadian Folklore" techUsed={["Unity", "C#"]} githubLink="https://github.com/pedrogaldfreitas/CampGame" footerText={footers["LCF"]} img={LCFPic}/>
+                    <ProjectSlide title="Occult Cascadia" techUsed={["Unity", "C#"]} githubLink="https://github.com/pedrogaldfreitas/CampGame" footerText={footers["LCF"]} img={LCFPic}/>
                 </SwiperSlide>
                 <SwiperSlide>
                     <ProjectSlide title="Workshop+" techUsed={["Java"]} githubLink="https://github.com/snayyar00/WorkshopPlus" footerText={footers["WorkshopPlus"]} img={WorkshopPlusPic}/>

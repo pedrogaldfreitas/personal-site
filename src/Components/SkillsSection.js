@@ -35,7 +35,9 @@ export default function Skills() {
                     <SkillBar skill="Git" level={93} inView={isInView}/>
                     <SkillBar skill="Node.js" level={90} inView={isInView}/>
                     <SkillBar skill="SQL" level={87} inView={isInView}/>
+                    <SkillBar skill="FastAPI" level={85} inView={isInView}/>
                     <SkillBar skill="AWS" level={80} inView={isInView}/>
+                    <SkillBar skill="Docker" level={75} inView={isInView}/>
                 </div>
                 <div className='skill-type-container'>
                     <div className='skills-header'>
@@ -43,7 +45,7 @@ export default function Skills() {
                     </div>
                     <SkillBar skill="Portuguese" level={100} inView={isInView}/>
                     <SkillBar skill="Spanish" level={75} inView={isInView}/>
-                    <SkillBar skill="French" level={50} inView={isInView}/>
+                    <SkillBar skill="French" level={60} inView={isInView}/>
                 </div>
             </div>
         </div>
