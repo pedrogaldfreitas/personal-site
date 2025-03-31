@@ -79,6 +79,42 @@
             }
         }
 
+        .slide-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Nyata FTR';
+            width: fit-content;
+            align-self: center;
+            
+
+            .icon {
+                font-size: 120px;
+                color: rgba(255, 255, 255, 0.5);
+                margin-top: 25px;
+                padding-bottom: 5px;
+                transition: (transform 0.1s ease), (color 0.1s ease);
+            }
+
+            .playable-text {
+                font-size: 30px;
+                color: rgba(255, 255, 255, 0);
+                transition: (transform 0.1s ease), (color 0.1s ease);
+            }
+
+            &:hover {
+                .icon {
+                    color: white;
+                    cursor: pointer;
+                    font-size: 135px;
+                }
+    
+                .playable-text {
+                    color: white;
+                }
+            }
+        }
+
         .slide-footer {
             background: linear-gradient(to top, black, transparent);
             align-self: center;
