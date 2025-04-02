@@ -7,6 +7,28 @@
 .carousel-container {
     justify-items: center;
     width: -webkit-fill-available;
+
+    .video-container {
+        width: 60%;
+        margin-top: 30px;
+
+        @media (max-width: 1250px) {
+            width: 90%;
+        }
+
+        video {
+            border-radius: 30px;
+        }
+
+        .video-title {
+            font-family: 'Nyata FTR';
+            color: rgba(255, 255, 255, 0.623);
+            font-size: 30px;
+            margin-top: 15px;
+        }
+
+
+    }
 }
 
 .slide-style {
@@ -46,7 +68,7 @@
             background: linear-gradient(to bottom, rgb(0 0 0 / 100%), transparent);
             border-radius: 25px 25px 0 0;
             
-            @media (max-width: 1060px) {
+            @media (max-width: 1130px) {
                 font-size: 50px;
             }
 
@@ -85,8 +107,8 @@
             align-items: center;
             font-family: 'Nyata FTR';
             width: fit-content;
-            align-self: center;
-            
+            align-self: center;    
+            transition: (text-shadow 0.1s ease);
 
             .icon {
                 font-size: 120px;
@@ -94,12 +116,26 @@
                 margin-top: 25px;
                 padding-bottom: 5px;
                 transition: (font-size 0.1s ease), (color 0.1s ease);
+
+                @media (max-width: 530px) {
+                    font-size: 100px;
+                }
+
+                path, circle, rect {
+                    stroke: rgba(0, 0, 0, 0.534);
+                    stroke-width: 15;
+                    transition: (stroke 0.1s ease), (stroke-width 0.1s ease);
+                }
             }
 
             .playable-text {
-                font-size: 30px;
+                font-size: 25px;
                 color: rgba(255, 255, 255, 0);
                 transition: (font-size 0.1s ease), (color 0.1s ease);
+
+                @media (max-width: 530px) {
+                    font-size: 15px;
+                }
             }
 
             &:hover {
@@ -107,10 +143,24 @@
                     color: white;
                     cursor: pointer;
                     font-size: 135px;
+
+                    @media (max-width: 530px) {
+                        font-size: 115px;
+                    }
+
+                    path, circle, rect {
+                        stroke: black;
+                        stroke-width: 5;
+                    }
                 }
     
                 .playable-text {
                     color: white;
+                    text-shadow: 
+                        -2px -2px 0 black,  
+                        2px -2px 0 black,  
+                        -2px  2px 0 black,  
+                        2px  2px 0 black;
                 }
             }
         }
@@ -132,9 +182,15 @@
             width: 100%;
             text-shadow: 0.5px 0.5px 5px black;
 
-            @media (max-width: 540px) {
+            @media (max-width: 1370px) {
                 font-size: 15px;
                 padding-right: 20px;
+            }
+
+            @media (max-width: 530px) {
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 14px;
             }
         }
     }
