@@ -37,6 +37,12 @@ export default function MyCarousel() {
                     url: 'https://pfreitas-personal-website2000.s3.us-east-1.amazonaws.com/Videos/BaytreeCentre.mp4'
                 })
                 break;
+            case 'flightFinder':
+                setVideo({
+                    title: 'Demo: Flight Finder App',
+                    url: 'https://pfreitas-personal-website2000.s3.us-east-1.amazonaws.com/Videos/flightFinderVideo.mp4'
+                })
+                break;
         }
 
         setTimeout(() => {
@@ -74,7 +80,7 @@ export default function MyCarousel() {
                     <ProjectSlide title="Baytree Portal" techUsed={["TypeScript", "React", "NodeJS", "Express", "MongoDB"]} githubLink="https://github.com/Earth-373/baytree-centre-app" footerText={footers["BaytreeCentre"]} img={BaytreeCentrePic} playable={true} playableText={'Play Demo'} onClickPlay={() => SetCarouselVideo('baytree')}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProjectSlide title="Flight Finder" techUsed={["JavaScript", "React", "NodeJS"]} githubLink="https://github.com/pedrogaldfreitas/google-flights-clone" footerText={footers["Skyscrapper"]} img={SkyscrapperPic}/>
+                    <ProjectSlide title="Flight Finder" techUsed={["JavaScript", "React", "NodeJS"]} githubLink="https://github.com/pedrogaldfreitas/google-flights-clone" footerText={footers["Skyscrapper"]} img={SkyscrapperPic} playable={true} playableText={'Play Demo'} onClickPlay={() => SetCarouselVideo('flightFinder')}/>
                 </SwiperSlide>
                 <SwiperSlide>
                     <ProjectSlide title="Occult Cascadia" techUsed={["Unity", "C#"]} githubLink="https://github.com/pedrogaldfreitas/CampGame" footerText={footers["LCF"]} img={LCFPic}/>
