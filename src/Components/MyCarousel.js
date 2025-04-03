@@ -34,7 +34,7 @@ export default function MyCarousel() {
             case 'baytree':
                 setVideo({
                     title: 'Demo: Baytree Centre Mentor Portal',
-                    url: '/Videos/BaytreeCentre.mp4'
+                    url: 'https://pfreitas-personal-website2000.s3.us-east-1.amazonaws.com/Videos/BaytreeCentre.mp4'
                 })
                 break;
         }
