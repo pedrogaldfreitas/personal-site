@@ -12,9 +12,10 @@ import BaytreeCentrePic from '../Images/BaytreeCentre.png'
 import LCFPic from '../Images/LCF.png';
 import WorkshopPlusPic from '../Images/WorkshopPlus.png';
 import ReactPlayer from 'react-player';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 export default function MyCarousel() {
+
     const videoRef = useRef(null);
     const [video, setVideo] = useState({
         title: '',

@@ -12,7 +12,7 @@ import { FaLinkedin } from "react-icons/fa";
 import WaterRipple from './WaterRipple.js';
 import Skills from './SkillsSection.js';
 import ExperienceTimeline from './ExperienceTimeline';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import MyCarousel from './MyCarousel.js';
 import ContactCard from './ContactCard.js';
 

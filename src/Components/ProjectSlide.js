@@ -11,7 +11,7 @@ export default function ProjectSlide({title, techUsed, githubLink, footerText, i
                     <div className="slide-title-and-tech">
                         {title}
                         <div className="tech-used">
-                            {techUsed.map(thisTech => <TechBadge tech={thisTech} />)}
+                            {techUsed.map((thisTech, index) => <TechBadge key={"thisTech" + index} tech={thisTech} />)}
                         </div>
                     </div>
                     <div className="github-logo" onClick={() => window.open(githubLink, '_blank')}>

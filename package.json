@@ -12,6 +12,7 @@
     "react-dom": "^18.3.1",
     "react-google-recaptcha": "^3.1.0",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.4.0",
     "react-player": "^2.16.0",
     "react-router-dom": "^7.4.0",
@@ -22,7 +23,7 @@
     "react-vertical-timeline-component": "^3.5.3",
     "react-youtube": "^10.1.0",
     "sass": "^1.83.4",
-    "swiper": "^11.2.1",
+    "swiper": "11.2.0",
     "three": "^0.172.0",
     "vite-plugin-static": "^0.0.3",
     "web-vitals": "^2.1.4"
