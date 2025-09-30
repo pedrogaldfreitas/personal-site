@@ -14,6 +14,7 @@ const ExperienceTimeline = () => {
                 className="vertical-timeline-element--work"
                 iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<GiDiploma />}  
+                visible={true}
             >
                 <p className="event-date">June 2024</p>
                 <h3 className="vertical-timeline-element-title">Graduated</h3>
@@ -23,6 +24,7 @@ const ExperienceTimeline = () => {
                 className="vertical-timeline-element--work"
                 iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<MdWork />}  
+                visible={true}
             >
                 <p className="event-date">May 2022-December 2022</p>
                 <h3 className="vertical-timeline-element-title">Web Application Developer</h3>
@@ -40,6 +42,7 @@ const ExperienceTimeline = () => {
                 className="vertical-timeline-element--work"
                 iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<FaProjectDiagram  />}  
+                visible={true}
             >
                 <p className="event-date">September 2021-December 2021</p>
                 <h3 className="vertical-timeline-element-title">The Baytree Centre Portal Project</h3>
@@ -55,6 +58,7 @@ const ExperienceTimeline = () => {
                 className="vertical-timeline-element--work"
                 iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<MdWork />}  
+                visible={true}
             >
                 <p className="event-date">May 2021-August 2021</p>
                 <h3 className="vertical-timeline-element-title">Software Developer/Tester</h3>
@@ -69,6 +73,7 @@ const ExperienceTimeline = () => {
                 className="vertical-timeline-element--work"
                 iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<FaGraduationCap />}  
+                visible={true}
             >
                 <p className="event-date">September 2018</p>
                 <h3 className="vertical-timeline-element-title">Began Courses</h3>
