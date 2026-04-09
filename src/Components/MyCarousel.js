@@ -84,7 +84,7 @@ export default function MyCarousel() {
                     <ProjectSlide title="Flight Finder" techUsed={["JavaScript", "React", "NodeJS"]} githubLink="https://github.com/pedrogaldfreitas/google-flights-clone" footerText={footers["Skyscrapper"]} img={SkyscrapperPic} playable={true} playableText={'Play Demo'} onClickPlay={() => SetCarouselVideo('flightFinder')}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProjectSlide title="Occult Cascadia" techUsed={["Unity", "C#"]} githubLink="https://github.com/pedrogaldfreitas/CampGame" footerText={footers["LCF"]} img={LCFPic}/>
+                    <ProjectSlide title="Occult Pacific" techUsed={["Unity", "C#"]} githubLink="https://github.com/pedrogaldfreitas/CampGame" footerText={footers["LCF"]} img={LCFPic}/>
                 </SwiperSlide>
                 <SwiperSlide>
                     <ProjectSlide title="Workshop+" techUsed={["Java"]} githubLink="https://github.com/snayyar00/WorkshopPlus" footerText={footers["WorkshopPlus"]} img={WorkshopPlusPic}/>

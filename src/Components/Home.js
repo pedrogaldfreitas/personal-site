@@ -96,8 +96,8 @@ export default function Home() {
                 A skilled and dedicated software developer based in Vancouver, BC 
                 with professional experience in both front-end and back-end development. ‍
                 <br/><br/>
-                Proficient in modern web technologies such as React, TypeScript, Node.js, 
-                and AWS, I excel at designing and implementing scalable, user-centric applications. 
+                Proficient in modern web technologies such as React, TypeScript, Django, SQL Server,
+                and AWS/Azure, I excel at designing and implementing scalable, user-centric applications. 
                 My experience consists of delivering impactful features, optimizing performance, and 
                 collaborating across teams to meet project goals.
               </div>

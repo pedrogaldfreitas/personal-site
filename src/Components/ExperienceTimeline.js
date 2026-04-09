@@ -13,6 +13,23 @@ const ExperienceTimeline = () => {
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 iconStyle={{background: '#290b4d', color: '#fff'}} 
+                icon={<MdWork />}  
+                visible={true}
+            >
+                <p className="event-date">November 2025-April 2026</p>
+                <h3 className="vertical-timeline-element-title">Full Stack Developer</h3>
+                <h4 className="vertical-timeline-element-subtitle">Miebach Consulting</h4>
+                <ul className="vertical-timeline-element-info bullet-list">
+                    <li className="timeline-list-item">Delivered front-end, back-end, and database tasks on time for MATER, a project management solution, contributing across the full stack using React, Django, and SQL Server.</li>
+                    <li className="timeline-list-item">Strengthened previously weaker technical areas, including Django, through independent learning outside of work, allowing for faster contribution to backend development tasks.</li>
+                    <li className="timeline-list-item">Collaborated with both technical and non-technical stakeholders to clarify business requirements, assess technical feasibility, and support solutions aligned with project and business goals.</li>
+                    <li className="timeline-list-item">Managed competing priorities in a multi-role consulting environment by organizing work effectively and maintaining clear communication with management when clarification was needed.</li>
+                    <li className="timeline-list-item">Investigated application errors to identify root causes and implement fixes that reduced recurring issues.</li>
+                </ul>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                iconStyle={{background: '#290b4d', color: '#fff'}} 
                 icon={<GiDiploma />}  
                 visible={true}
             >
