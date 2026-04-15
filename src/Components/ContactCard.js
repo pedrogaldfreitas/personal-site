@@ -7,7 +7,7 @@ export default function ContactCard() {
 
     const phoneNum = "+1 (604)-763-8766";
     const email = "pedrogaldfreitas@gmail.com";
-    const location = "Burnaby, BC, Canada";
+    const location = "Montréal, QC, Canada";
     
     return (
         <div className="contact-card">
